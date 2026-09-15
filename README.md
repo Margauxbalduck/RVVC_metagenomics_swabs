@@ -25,58 +25,75 @@ The Quarto (.qmd) files contain the taxonomic and functional microbiome analyses
 * Integration with CD66b immunofluorescence staining data
 * Generation of manuscript figures and tables
 
+## Rendered analyses
+
+Interactive HTML reports containing the complete analysis outputs, figures, and statistical results are available through GitHub Pages:
+
+- [Cross-sectional vaginal swab analysis](https://margauxbalduck.github.io/RVVC_metagenomics_swabs/Cross_sectional_analysis_vagswabs.html)
+- [Functional metagenomic analysis](https://margauxbalduck.github.io/RVVC_metagenomics_swabs/Swabs_functional.html)
+
+The corresponding Quarto source files are available in this repository.
+
 ## Project structure
 
-The repository contains two main Quarto (`.qmd`) analysis files:
+The repository contains two main Quarto (`.qmd`) analysis files and their rendered HTML reports:
 
-```text
-RVVC_metagenomics_swabs/
-├── 01_vvc_microbiome_analysis.qmd
-├── 02_rvvc_functional_analysis.qmd
-└── README.md
-```
+    RVVC_metagenomics_swabs/
+    ├── 01_vvc_microbiome_analysis.qmd
+    ├── 02_vvc_functional_analysis.qmd
+    ├── README.md
+    └── docs/
+        ├── Cross_sectional_analysis_vagswabs.html
+        └── Swabs_functional.html
 
 ### `01_vvc_microbiome_analysis.qmd` — Taxonomic microbiome analysis
 
 Contains the main taxonomic analyses of the vaginal microbiome based on shotgun metagenomic sequencing data. Analyses include:
 
-* Data preprocessing, sample selection, filtering, and normalization
-* Alpha and beta diversity analyses
-* ANOSIM and PERMANOVA
-* Differential abundance analysis using ALDEx2
-* Relative abundance and major bacterial species analyses
-* Lactobacillus abundance analyses
-* Community state type (CST) classification
-* Microbial composition heatmaps
-* Associations with *Candida* detection
-* Associations between microbial composition and clinical severity
-* Clinical-score-stratified diversity and differential abundance analyses
-* Integration with clinical and medical history data
-* Microbial co-abundance/network analyses
-* Generation of taxonomic figures and summary tables
+- Data preprocessing, sample selection, filtering, and normalization
+- Alpha and beta diversity analyses
+- ANOSIM and PERMANOVA
+- Differential abundance analysis using ALDEx2
+- Relative abundance and major bacterial species analyses
+- *Lactobacillus* abundance analyses
+- Community state type (CST) classification
+- Microbial composition heatmaps
+- Associations with *Candida* detection
+- Associations between microbial composition and clinical severity
+- Clinical-score-stratified diversity and differential abundance analyses
+- Integration with clinical and medical history data
+- Microbial co-abundance/network analyses
+- Generation of taxonomic figures and summary tables
 
-### `02_rvvc_functional_analysis.qmd` — Functional microbiome analysis
+### `02_vvc_functional_analysis.qmd` — Functional microbiome analysis
 
 Contains analyses of the functional potential of the vaginal microbiome based on microbial pathway abundance data. Analyses include:
 
-* Functional pathway data preprocessing, quality control, filtering, and normalization
-* Differential pathway abundance analysis using ALDEx2
-* Alpha and beta diversity of functional profiles
-* ANOSIM and PERMANOVA of functional composition
-* Cross-sectional comparisons between study groups
-* Associations between functional profiles and clinical severity
-* Integration of functional profiles with host transcriptomic clustering
-* Pathway abundance heatmaps and participant-level visualizations
-* Species contributions to microbial pathways
-* Grouping of pathways into higher-level biological pathway classes (MetaCyc superclasses)
-* Superclass-level diversity, differential abundance, and statistical analyses
-* Correlations between pathway functions and clinical severity
-* PCoA analyses with functional pathway and superclass overlays
-* Generation of functional microbiome figures and summary analyses
+- Functional pathway data preprocessing, quality control, filtering, and normalization
+- Differential pathway abundance analysis using ALDEx2
+- Alpha and beta diversity of functional profiles
+- ANOSIM and PERMANOVA of functional composition
+- Cross-sectional comparisons between study groups
+- Associations between functional profiles and clinical severity
+- Integration of functional profiles with host transcriptomic clustering
+- Pathway abundance heatmaps and participant-level visualizations
+- Species contributions to microbial pathways
+- Grouping of pathways into higher-level biological pathway classes (MetaCyc superclasses)
+- Superclass-level diversity, differential abundance, and statistical analyses
+- Correlations between pathway functions and clinical severity
+- PCoA analyses with functional pathway and superclass overlays
+- Generation of functional microbiome figures and summary analyses
+
+### `docs/` — Rendered analyses
+
+The `docs/` directory contains rendered HTML reports of the analyses. These allow the complete analysis outputs, figures, and statistical results to be viewed directly in a web browser without running the Quarto source files locally.
+
+- [Cross-sectional vaginal swab analysis](https://margauxbalduck.github.io/RVVC_metagenomics_swabs/Cross_sectional_analysis_vagswabs.html)
+- [Functional metagenomic analysis](https://margauxbalduck.github.io/RVVC_metagenomics_swabs/Swabs_functional.html)
 
 ## Data availability
 
-Raw metagenomic sequencing data will be deposited in the European Nucleotide Archive (ENA).
+Raw metagenomic sequencing data are deposited in the European Nucleotide Archive (ENA) PRJEB126527.
 
 Processed taxonomic and functional pathway data are provided with the associated manuscript where applicable.
 
